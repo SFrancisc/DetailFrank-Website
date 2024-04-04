@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="../contact/contact.css">
+    <script src="https://kit.fontawesome.com/4a251a00a7.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="contact">
+        <div class="container">
+            <nav><a href="/">
+                <img src="../images/Logo.png" class="logo">
+            </a>
+                <ul id="sidemenu">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/aboutUs/aboutUs.html">AboutUs</a></li>
+                    <li><a href="/services/services.html">Services</a></li>
+                    <li><a href="/contact/contact.html">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <h1>Contact<span>Us</span></h1>
+            </div>
+        </div>
+    </div>
+    <div id="contact-form">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title"><span>Contact</span> DETAIL FRANK</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>szantofrancisc08@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>Tel: +40724552359</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/profile.php?id=100086361797680&locale=ro_RO"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/detail.frank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@detail.frank"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="https://www.youtube.com/@detail_frank"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Nume" placeholder="Nume" required>
+                        <input type="email" name="Email" placeholder="Email" required>
+                        <textarea name="Mesaj" rows="6" placeholder="Mesaj"></textarea>
+                        <button type="submit" class="btn">TRIMITE MESAJ</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="Proiect-special">
+        <div class="container">
+            <div class="Proiect-special-text">
+                <h1>AI UN PROIECT SPECIAL?</h1>
+                <a href="/contact/contact.html" class="btn-proiectspecial">HAI SA DISCUTAM</a>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright by @DETAIL FRANK</p>
+    </div>
+    <div class="container">
+        <nav><a href="/">
+            <img src="../images/Logo.png" class="logo">
+        </a>
+            <p>Copyright by<br> @DETAIL FRANK</p>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/aboutUs/aboutUs.html">AboutUs</a></li>
+                <li><a href="/services/services.html">Services</a></li>
+                <li><a href="/contact/contact.html">Contact</a></li>
+                <li><a href="#">Politica de Cookie</a></li>
+                <li><a href="#">Politica de confidentialitate</a></li>
+            </ul>
+        </nav>
+    </div>
+    <script>
+        var sidemenu = document.getElementById("sidemenu")
+    
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbz8TJJonPMOPUYoeedWrv77dW8ErlJ3N0nZqH9CsTQD0TVPkoTh4kTtA3U2vK1JKw/exec'
+        const form = document.forms['submit-to-google-sheet']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+</body>
+</html>

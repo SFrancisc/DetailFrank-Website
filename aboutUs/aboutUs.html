@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AboutUs</title>
+    <link rel="stylesheet" href="aboutUs.css">
+    <script src="https://kit.fontawesome.com/4a251a00a7.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="aboutUs">
+        <div class="container">
+            <nav><a href="/">
+                <img src="../images/Logo.png" class="logo">
+            </a>
+                <ul id="sidemenu">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/aboutUs/aboutUs.html">AboutUs</a></li>
+                    <li><a href="/services/services.html">Services</a></li>
+                    <li><a href="/contact/contact.html">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <h1>About<span>Us</span></h1>
+            </div>
+        </div>
+    </div>
+    <div class="info-text">
+        <div class="container">
+            <div class="info-list">
+                <div class="info">
+                    <h1>CINE SUNTEM</h1>
+                    <h2>DETAIL<br>FRANK</h2>
+                    <h3 class="line"></h3>
+                </div>
+                <div class="info">
+                    <p>La Detail Frank, nu oferim doar servicii, ci livrăm <span>experiențe memorabile</span>. Suntem determinați să aducem un plus de valoare fiecărui proiect 
+                        și să stabilim noi standarde în industrie prin calitatea serviciilor noastre premium.<br><br>
+                        Oferirim servicii premium și de <span>calitate superioară</span> clienților nostrii, într-o căutare continuă a perfecțiunii si cu o experiență remarcabilă,
+                        ne-am angajat să depășim așteptările clienților noștri prin servicii personalizate și atenție la detalii.<br><br>
+                        Credem că fiecare client merită ceva cu <span>adevărat special</span>. De aceea, oferim o gamă largă de nevoi. De la consultanță personalizată, 
+                        până la servicii de întreținere, infrumusetare și protectie de cea mai înaltă calitate, suntem aici pentru a transforma visurile clienților 
+                        noștri în realitate.</p>
+                </div>
+                <div class="info">
+                    <img src="../images/7.jpg" class="img-aboutUs">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="Proiect-special">
+        <div class="container">
+            <div class="Proiect-special-text">
+                <h1>AI UN PROIECT SPECIAL?</h1>
+                <a href="/contact/contact.html" class="btn-proiectspecial">HAI SA DISCUTAM</a>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright by @DETAIL FRANK</p>
+    </div>
+    <div class="container">
+        <nav><a href="/">
+            <img src="../images/Logo.png" class="logo">
+        </a>
+            <p>Copyright by<br> @DETAIL FRANK</p>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/aboutUs/aboutUs.html">AboutUs</a></li>
+                <li><a href="/services/services.html">Services</a></li>
+                <li><a href="/contact/contact.html">Contact</a></li>
+                <li><a href="#">Politica de Cookie</a></li>
+                <li><a href="#">Politica de confidentialitate</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>
+<script>
+    var sidemenu = document.getElementById("sidemenu")
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+</script>
+</body>
+</html>
